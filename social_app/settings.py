@@ -85,8 +85,11 @@ WSGI_APPLICATION = 'social_app.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'djongo',
-        'NAME': 'socialdatabase',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'socialDatabase',
+        'USER': 'social_admin',
+        'PASSWORD': 'SocialSuperAdmin',
+        'PORT': '5432'
     }
 }
 

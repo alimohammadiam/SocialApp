@@ -130,7 +130,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-LOGIT_REDIRECT_URL = '/profile/'
+LOGIT_REDIRECT_URL = 'profile/'
 LOGIN_URL = '/login/'
 LOGOUT_URL = '/logout/'
 
@@ -143,3 +143,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'images')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'social.User'
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'social.authentication.PhoneAuthBackend',
+]
